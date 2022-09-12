@@ -1,6 +1,7 @@
-site_name: Python Projects
+site_name: My Projects
 nav:
-  -  Snake Game: snake_game/snake.md
+  - index.md
+  - snake_game/snake.md
 #
 #
 # Don't alter the following sections

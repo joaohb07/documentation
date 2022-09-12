@@ -8,9 +8,9 @@ hide:
 <div class="container" markdown>
 <div class="description" markdown>
 
-<h1 class="title">Welcome to my Python Projects Documentation</h1>
+<h1 class="title">Welcome to my Projects Documentation</h1>
 
-  This technical documentation serves as a knowledge center for every personal project I worked with using Python.
+  This technical documentation serves as a knowledge center for every personal project I worked.
 
 <div class="cards button-align" markdown>
 

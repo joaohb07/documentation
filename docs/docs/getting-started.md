@@ -10,7 +10,6 @@ mkdocs serve
 How to deploy documentation:
 
 ```bash
-git checkout gh-pages
 mkdocs gh-deploy
 ```
 
