@@ -22,11 +22,11 @@ footer .md-footer-meta{
 }
 
 [data-md-color-primary=black] {
-    --md-typeset-a-color: #4287ff;
+    --md-typeset-a-color: teal;
 } 
 
 [data-md-color-scheme=slate][data-md-color-primary=black], [data-md-color-scheme=slate][data-md-color-primary=white] {
-    --md-typeset-a-color: #4287ff;
+    --md-typeset-a-color: teal;
 }
 
 .container{
