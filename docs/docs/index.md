@@ -20,8 +20,9 @@ hide:
 </div>
 
 <div class="image-align" markdown>
-
-  ![Homepage doodle](img/doodle.png)
+<!-- 
+  ![Homepage doodle](img/doodle.gif) -->
+  <img src="img/doodle.gif" width="660" height="568">
 
 </div>
 </div>

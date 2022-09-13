@@ -1,7 +1,7 @@
 site_name: My Projects
 nav:
-  - index.md
-  - snake_game/snake.md
+  - Home: index.md
+  - Snake Game: snake_game/snake.md
 #
 #
 # Don't alter the following sections
@@ -9,8 +9,8 @@ nav:
 #
 theme:
   name: material
-  logo: img/logo.png
-  favicon: img/logo.png
+  logo: img/logo.gif
+  favicon: img/logo.gif
   features:
     - navigation.tabs
     - navigation.instant
@@ -22,10 +22,10 @@ theme:
     text: IBM Plex Sans
     code: IBM Plex Mono
   palette:
-    - media: "(prefers-color-scheme: light)"
+    - media: "(prefers-color-scheme: dark)"
       scheme: default
       primary: black
-      accent: blue
+      accent: white
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
