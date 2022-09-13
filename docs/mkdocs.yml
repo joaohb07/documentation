@@ -7,6 +7,9 @@ nav:
 # Don't alter the following sections
 #
 #
+repo_url: https://github.com/joaobotelho072002/joaobotelho072002.github.io
+repo_name: joaobotelho072002/joaobotelho072002.github.io
+edit_uri: ""
 theme:
   name: material
   logo: img/logo.gif
