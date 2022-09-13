@@ -1,7 +1,9 @@
 site_name: My Projects
 nav:
   - Home: index.md
-  - Snake Game: snake_game/snake.md
+  - Python:
+    - Snake Game: python/snake_game/snake.md
+    - Baseline Classification: python/baseline_classification/Baseline-Classification.ipynb
 #
 #
 # Don't alter the following sections
@@ -47,6 +49,10 @@ markdown_extensions:
       anchor_linenums: true
   - attr_list
   - md_in_html
+plugins:
+  - mkdocs-jupyter:
+      execute: True
+      theme: dark
 extra_css:
   - stylesheets/extra_css.css
 # extra_javascript:
