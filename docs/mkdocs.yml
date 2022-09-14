@@ -3,7 +3,7 @@ nav:
   - Home: index.md
   - Python:
     - Snake Game: python/snake_game/snake.md
-    - Baseline Classification: python/baseline_classification/Baseline-Classification.ipynb
+    - Hollywood Highest Grossing Movies: python/movies_grossing/movies.ipynb
 #
 #
 # Don't alter the following sections
