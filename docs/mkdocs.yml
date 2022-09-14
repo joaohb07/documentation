@@ -2,8 +2,9 @@ site_name: My Projects
 nav:
   - Home: index.md
   - Python:
-    - Snake Game: python/snake_game/snake.md
-    - Hollywood Highest Grossing Movies: python/movies_grossing/movies.ipynb
+    - python/snake_game/snake.md
+    - Nootebooks:
+      - python/movies_grossing/movies.ipynb
 #
 #
 # Don't alter the following sections
@@ -16,6 +17,8 @@ theme:
   name: material
   logo: img/logo.gif
   favicon: img/logo.gif
+  icon:
+    repo: material/github
   features:
     - navigation.tabs
     - navigation.instant
@@ -23,6 +26,9 @@ theme:
     - navigation.indexes
     - toc.follow
     - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
   font:
     text: IBM Plex Sans
     code: IBM Plex Mono
@@ -50,8 +56,9 @@ markdown_extensions:
   - attr_list
   - md_in_html
 plugins:
+  - search
   - mkdocs-jupyter:
-      execute: True
+      execute: true
       theme: dark
 extra_css:
   - stylesheets/extra_css.css
