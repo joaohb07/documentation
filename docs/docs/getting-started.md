@@ -2,14 +2,14 @@
 
 How to build documentation and serve:
 
-```bash
+```bash title="Run mkdocs locally"
 mkdocs build
 mkdocs serve 
 ```
 
 How to deploy documentation:
 
-```bash
+```bash title="Deploy to gh-pages branch"
 mkdocs gh-deploy
 ```
 

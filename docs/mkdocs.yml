@@ -20,6 +20,7 @@ theme:
   icon:
     repo: material/github
   features:
+    - content.code.annotate
     - navigation.tabs
     - navigation.instant
     - navigation.tracking
@@ -49,6 +50,8 @@ theme:
         name: Switch to light mode
 markdown_extensions:
   - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.highlight:
@@ -59,6 +62,7 @@ plugins:
   - search
   - mkdocs-jupyter:
       execute: true
+      include_source: true
       theme: dark
 extra_css:
   - stylesheets/extra_css.css

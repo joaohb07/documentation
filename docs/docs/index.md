@@ -22,7 +22,7 @@ hide:
 <div class="image-align" markdown>
 <!-- 
   ![Homepage doodle](img/doodle.gif) -->
-  <img src="img/doodle.gif" width="560" height="468">
+  <img src="img/doodle.gif" width="660" height="568">
 
 </div>
 </div>
