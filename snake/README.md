@@ -1,21 +1,31 @@
-# Snake game w/ Pygame
+# Snake game
 
-For developing this simple snake game I used [pygame](https://www.pygame.org/docs/) lib.
+----
+
+For developing this simple snake game I used ***[pygame](https://www.pygame.org/docs/)*** library.
+
+***[Snake Game code](https://github.com/joaobotelho072002/joaobotelho072002.github.io/tree/main/snake)***, the result looks like this:
+
+<div class="image-align" markdown> ![gif](../../img/snakepy.gif) </div>
 
 ## Installation
 
-Create and activate a new python virtual environment.
+This script is developed in ***[python3.7 >](https://www.python.org/downloads/)***, make sure you have this installed before run it.
 
-```bash
-python3 -m venv <venv_name>
-source <venv_name>/bin/activate
-```
+- Clone `main` branch from my ***[repo](https://github.com/joaobotelho072002/joaobotelho072002.github.io)***.
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install requirements.
+- Create and activate a new python virtual environment.
 
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    python3 -m venv <venv_name>
+    source <venv_name>/bin/activate
+    ```
+
+- Use the package manager ***[pip](https://pip.pypa.io/en/stable/)*** to install requirements.
+
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
