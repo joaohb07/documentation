@@ -6,7 +6,7 @@ For developing this simple snake game I used ***[pygame](https://www.pygame.org/
 
 ***[Snake Game code](https://github.com/joaobotelho072002/joaobotelho072002.github.io/tree/main/snake)***, the result looks like this:
 
-<div class="image-align" markdown> ![gif](../../img/snakepy.gif) </div>
+<div class="image-align" markdown> ![gif](../docs/docs/img/snakepy.gif) </div>
 
 ## Installation
 
