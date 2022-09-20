@@ -1,7 +1,5 @@
 # Snake game
 
-----
-
 For developing this simple snake game I used ***[pygame](https://www.pygame.org/docs/)*** library.
 
 ***[Snake Game code](https://github.com/joaobotelho072002/joaobotelho072002.github.io/tree/main/snake)***, the result looks like this:
