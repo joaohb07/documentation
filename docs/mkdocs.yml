@@ -1,8 +1,10 @@
 site_name: My Projects
 nav:
   - Home: index.md
+  - Overview: getting-started.md
   - Python:
     - python/snake_game/snake.md
+    - python/walk_dir/walk_dir.md
     - Nootebooks:
       - python/movies_grossing/movies.ipynb
 #
