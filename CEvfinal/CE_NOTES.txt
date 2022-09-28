@@ -1,0 +1,17 @@
+1° - Jogar num BD e Server.(Ajuda da Mari);
+
+ESTOQUE:
+- Barra de Pesquisas;
+- Lista de Urgências (Puxa os itens vermelhos e amarelos apenas.);
+- ?Prateleira? -> Tudo que sai do estoque vai para a prateleira (necessário?);???????????
+
+HISTÓRICO:
+- Tudo que entra e sai do estoque;
+- Balanço Geral (Qtd. de itens que entraram e saíram geral.);
+- Balanço de item (Quanto entrou e saiu de cada item);
+- Barra de Pesquisas (Pesquisar itens.);
+
+PEDIDOS:
+- Nova tab. no BD -> pedidos (id,nome,cliente,cat/item,qtd do item,data.) chave estrangeira (id) da tab usuarios;
+- Barra de Pesquisas(Pesquisar os pedidos);
+- Colocar uma Lista que exibe todos os pedidos (id,nome,cliente,cat/item,qtd do item,data.);

@@ -1,0 +1,36 @@
+Categorias
+ - Criar Categoria:
+   usando Insert;
+ - Editar Categoria:
+   usando Update, Update categorias set nome = 'novo_nome' where id = id(O id da categoria);
+ - Excluir Categoria:
+   usando Delete;(Conflito? Quando excluir a categoria o que acontece com os itens?)
+
+Adicionar Itens:
+ - Adicionar Itens:
+   usando Insert;
+
+Estoque:
+ - Visualizar Itens em suas respectivas categorias:
+   usar Select;
+ - Editar os itens:
+   usar Update para atualizar o nome, descrição, estoque e o estoque mínimo;
+   Usar um if(?) para aplicar as condições de estoque mínimo e estoque zerado;
+ - Quando o estoque atingir o numero do estoque minimo ou menor, aparecer o item em amarelo;
+ - Caso o estoque atinja o 0, aparecer o item em vermelho;
+
+
+(SE SOBRAR TEMPO...)
+
+Histórico:
+ - Exibir a data e o horário em que itens forem adicionados ou removidos do estoque;
+   Ex.: Adicionei 50 bananas à categoria frutas(Aparece no historico em forma de lista:
+   Entrada : 50 bananas 'hora' 'dia');
+   Removi 25 bananas do meu estoque(Saída: 25 bananas 'hora' 'data');
+
+(MAIS PRA FRENTE, OU SE DER APÓS O HISTÓRICO)
+
+Prateleira:
+ - Exibir a quantidade de itens que foi retirada do estoque;
+ - Ex.: Retirei 20 bananas do estoque, assim elas vão diretamente para pratileira onde é feito um controle de 
+   quantos produtos possuem na prateleira para serem vendidos.

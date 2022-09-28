@@ -1,0 +1,50 @@
+11:17 06/09/2018<form>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Primeiro Nome: <?php echo $exibe['Pnome'];?></label>
+    <div class="input-group">
+    <input type="text" class="form-control" placeholder="Editar primeiro nome..."  aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn registrar shadow-lg" type="submit">Editar</button>
+    </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Segundo Nome: <?php echo $exibe['Snome'];?></label>
+    <div class="input-group">
+    <input type="text" class="shadow-lg form-control" id="formGroupExampleInput2" placeholder="Editar segundo nome...">
+    <button class="btn registrar shadow-lg" type="submit">Editar</button>
+    </div>
+  </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Nome da Empresa: <?php echo $exibe['nomEmp'];?></label>
+        <div class="input-group">
+        <input type="text" class="shadow-lg form-control" id="formGroupExampleInput2" placeholder="Editar nome da empresa...">
+        <button class="btn registrar shadow-lg" type="submit">Editar</button> 
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Descri��o da Empresa: <?php echo $exibe['descEmp'];?></label>
+        <div class="input-group">
+        <textarea class="form-control" id="formGroupExampleInput2" placeholder="Editar descri��o da empresa..."></textarea>
+        <button class="btn registrar shadow-lg" type="submit">Editar</button> 
+      </div>
+    </div>
+    <hr style="background-color: #fff;">
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Email: <?php echo $exibe['email']; }?></label>
+        <div class="input-group">
+        <input type="email" class="shadow-lg form-control" id="formGroupExampleInput2" placeholder="Editar e-mail...">
+        <button class="btn registrar shadow-lg" type="submit">Editar</button> 
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Senha</label>
+        <input type="email" class="shadow-lg form-control" id="formGroupExampleInput2" placeholder="Senha atual...">
+        <div class="input-group">
+        <input type="password" class="shadow-lg form-control" id="formGroupExampleInput2" placeholder="Nova senha...">
+        <button class="btn registrar shadow-lg" type="submit">Editar</button> 
+      </div>
+    </div>
+    <hr style="background-color: #fff;">
+    <a href="logout.php" class="btn btn-danger btn-block">Log Out</a>
+</form>
