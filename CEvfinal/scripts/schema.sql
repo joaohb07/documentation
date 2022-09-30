@@ -1,4 +1,8 @@
-CREATE DATABASE ce IF NOT EXISTS;
+flush privileges;
+
+CREATE DATABASE IF NOT EXISTS ce;
+ALTER DATABASE ce CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE ce;
 
 CREATE TABLE usuario(
 id int auto_increment not null,
@@ -10,7 +14,7 @@ Snome varchar(30) not null,
 tipoEmp varchar(30) not null,
 descEmp varchar(30) not null,
 PRIMARY KEY(id)
-)
+);
 
 
 CREATE TABLE categorias( 
@@ -19,7 +23,7 @@ nome varchar(30) NOT NULL,
 idUser int NOT NULL, 
 PRIMARY KEY (id), 
 FOREIGN KEY (idUser) REFERENCES usuario(id) 
-)
+);
 
 CREATE TABLE produtos(
 id int auto_increment not null,
@@ -33,4 +37,4 @@ locprod varchar(60) not null,
 codprod varchar(50) not null,
 PRIMARY KEY(id),
 FOREIGN KEY (categoria) REFERENCES categorias(id) 
-)
+);

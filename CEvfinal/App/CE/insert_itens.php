@@ -14,7 +14,7 @@ $busca_categoria=mysqli_query($con, "SELECT id FROM categorias WHERE nome ='".$_
 $id_categoria = mysqli_fetch_array($busca_categoria);
 $categoria=$id_categoria['id'];
 
- $sql = "INSERT INTO produtos (nome, estoqueMin, estoque, descProd, categoria, locprod, codprod) VALUES ('$nome','$estoqueMin','$estoque','$descProd','$categoria','$locprod','$codprod')";
+ $sql = "INSERT INTO produtos(nome, estoqueMin, estoque, descProd, categoria, locprod, codprod) VALUES ('$nome','$estoqueMin','$estoque','$descProd','$categoria','$locprod','$codprod')";
  $salvar = mysqli_query($con,$sql);
 
  if($salvar){

@@ -1,29 +1,38 @@
-version: "3.8"
+version: "2"
 services:
-  php-env:
-    build: .
-    volumes:
-        - ./App/CE:/var/www/html
-    ports:
-        - 9000:80
-  
-  mysql_db:
-    image: mysql:5.7
-    restart: always
-    environment:
-        MYSQL_ROOT_PASSWORD: root
-        MYSQL_DATABASE: ce
-    ports:
-        - 3306:80
-    volumes:
-        - ./scripts:/var/lib/mysql:rw
-        - ./scripts/schema.sql:/docker-entrypoint-initdb.d/init.sql:ro
-
-  
-  phpmyadmin:
-    image: phpmyadmin:latest
-    restart: always
-    ports:
-        - 9001:80
-    environment:
-        - PMA_ARBITRARY=1
+    www:
+        build: .
+        ports: 
+            - "8001:80"
+        volumes:
+            - ./App/CE:/var/www/html/
+        links:
+            - db
+        networks:
+            - default
+    db:
+        image: mysql:5.7.13
+        ports: 
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: ce
+            MYSQL_USER: test
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: root
+        volumes:
+            - ./scripts:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - db:db
+        ports:
+            - 8000:80
+        environment:
+            MYSQL_USER: test
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: root
+volumes:
+    persistent:

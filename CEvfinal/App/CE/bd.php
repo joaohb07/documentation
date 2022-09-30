@@ -1,17 +1,12 @@
-<html>
 <?php
+ $hostname = "db";
+ $user = "test";
+ $password = "test";
+ $database = "ce";
 
-$servername = "mysql_db";
-$username = "root";
-$password = "root";
+ $con = mysqli_connect($hostname,$user,$password,$database);
 
-// Create connection
-$con = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-}
+ if(!$con){
+    echo "Não foi possível conectar ao banco de dados";
+ }
 ?>
-
-</html>

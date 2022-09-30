@@ -1,15 +1,14 @@
 <?php 
-
-session_start();
-
-include("bd.php");
-$busca = mysqli_query($con, "SELECT * FROM usuario WHERE email ='".$_SESSION['email']."'");
-$exibe1 = mysqli_fetch_array($busca);
-
-?>
+  session_start();
+  
+  include("bd.php");
+  $busca = mysqli_query($con, "SELECT * FROM usuario WHERE email ='".$_SESSION['email']."'");
+  $exibe1 = mysqli_fetch_array($busca);
+  
+  ?>
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Estoque</title>
@@ -21,49 +20,38 @@ $exibe1 = mysqli_fetch_array($busca);
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <style>
       .registrar{
-        color: #5271ff;
-        background-color: #fff;
-        border-color:#5271ff;
+      color: #5271ff;
+      background-color: #fff;
+      border-color:#5271ff;
       }
     </style>
-
-</head>
-<body style="background-color: #5271ff;">
-
+  </head>
+  <body style="background-color: #5271ff;">
     <header>
-    <nav class="shadow-lg navbar navbar-dark" style="background-color: #1d1d45;">
+      <nav class="shadow-lg navbar navbar-dark" style="background-color: #1d1d45;">
         <a class="navbar-brand float-left" href="categorias.html"><strong>Editar</strong></a>
         <a href="additens.php" class="shadow-lg btn btn-danger" role="button" aria-pressed="true">Voltar</a>
-    </nav>
-  </header>
-  <div class="jumbotron" style="background-color: #5271ff;">
+      </nav>
+    </header>
+    <div class="jumbotron col-xl-8 col-lg-8 col-md-8 col-sm-10 col-10 mx-auto" style="background-color: rgba(0, 0, 0, 0);">
     <main>
     <div class="card shadow-lg">
     <form method="POST" action="detalhes_itens2.php">
-    <div class="card-body">
-    <h5 class="card-title">1.Categoria</h5>
-    
-          <select name="categoria" id="inputCatItem" class="shadow form-control">
-             <option selected>Escolha a categoria...</option>
-
-              <?php
-              $result = mysqli_query($con, "SELECT nome FROM categorias WHERE idUser ='".$exibe1['id']."'");
-              while($row = mysqli_fetch_assoc($result))
-              {
-              ?>
-              <option><?php echo $row['nome']; ?></option>
-             
-              <?php } ?>
-
-           </select>
-
-           <br>
-
-        
-
-           <button type="submit" class="shadow btn btn-block text-white" style="background-color:#5271ff;" ><strong>Proxima etapa</strong></button>
-   
-</div>
-</form>
-</body>
+      <div class="card-body">
+        <h5 class="card-title">1.Categoria</h5>
+        <select name="categoria" id="inputCatItem" class="shadow form-control">
+          <option selected>Escolha a categoria...</option>
+          <?php
+            $result = mysqli_query($con, "SELECT nome FROM categorias WHERE idUser ='".$exibe1['id']."'");
+            while($row = mysqli_fetch_assoc($result))
+            {
+            ?>
+          <option><?php echo $row['nome']; ?></option>
+          <?php } ?>
+        </select>
+        <br>
+        <button type="submit" class="shadow btn btn-block text-white" style="background-color:#5271ff;" ><strong>Proxima etapa</strong></button>
+      </div>
+    </form>
+  </body>
 </html>

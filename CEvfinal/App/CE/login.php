@@ -13,22 +13,19 @@ if(empty($_POST['email']) || empty($_POST['senha'])){
 $email = mysqli_real_escape_string($con,$_POST['email']);
 $senha = mysqli_real_escape_string($con,$_POST['senha']);
 
-$query = "SELECT email, senha FROM usuario WHERE email = '{$email}' AND senha = '{$senha}'";
+$query = "select email, senha from usuario where email = '{$email}' and senha = '{$senha}'";
+
 $resultado = mysqli_query($con,$query);
 
-if($resultado != false){
-    $row = mysqli_num_rows($resultado);
-}else{
-    echo $resultado; 
-}
+$row = mysqli_num_rows($resultado);
 
 if($row == 1){
-    header("Location: home.php");
     $_SESSION['email'] = $email;
+    header("Location: home.php");
     exit();
 }else{
-    header("Location: index.php");
     $_SESSION['nao_autenticado'] = true;
+    header("Location: index.php");
     exit ();
 }
 
