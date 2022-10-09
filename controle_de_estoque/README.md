@@ -1,6 +1,6 @@
 # Controle de estoque
 
->**Stock Control**
+>**Stock Control:**
 >A stock control app developed using php with mysql and built using docker.
 
 ## Installation
