@@ -1,3 +1,7 @@
+---
+hide:
+  - navigation
+---
 # Build Documentation
 
 How to build documentation and serve:

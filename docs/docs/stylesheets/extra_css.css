@@ -21,13 +21,13 @@ footer .md-footer-meta{
     max-width: 1440px; 
 }
 
-[data-md-color-primary=black] {
+/* [data-md-color-primary=black] {
     --md-typeset-a-color: teal;
 } 
 
 [data-md-color-scheme=slate][data-md-color-primary=black], [data-md-color-scheme=slate][data-md-color-primary=white] {
     --md-typeset-a-color: teal;
-}
+} */
 
 .container{
     display: flex;
@@ -35,7 +35,8 @@ footer .md-footer-meta{
 
 .description{
     max-width: 500px;
-    padding: 100px 0 0 70px;
+    padding: 70px 0 0 50px;
+    color: white;
 }
 
 .button-align{
