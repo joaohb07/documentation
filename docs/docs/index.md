@@ -4,25 +4,36 @@ hide:
   - toc
   - title
 ---
+<style>
+  body{
+    background-image: url(img/synt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+  }
 
+  h1 {
+    color: rgb(150, 134, 185, 0.8);
+  }
+</style>
 <div class="container" markdown>
 <div class="description" markdown>
 
-<h1 class="title">Welcome to my Projects Documentation</h1>
+<h1 class="title"><b>Welcome to my Projects Documentation</b></h1>
 
   This technical documentation serves as a knowledge center for every personal project I worked.
 
 <div class="cards button-align" markdown>
 
-  [How to Deploy Documentation](./getting-started.md){ .md-button .md-button--primary}
+  [Documentation Overview](./getting-started.md){ .md-button .md-button--primary}
 
 </div>
 </div>
 
-<div class="image-align" markdown>
+<!-- <div class="image-align" markdown>
 <!-- 
   ![Homepage doodle](img/doodle.gif) -->
-  <img src="img/doodle.gif" width="660" height="568">
+  <!-- <img src="img/doodle.gif" width="660" height="568"> -->
 
-</div>
+<!-- </div> -->
 </div>

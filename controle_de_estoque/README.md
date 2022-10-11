@@ -5,7 +5,7 @@
 
 ## Installation
 
-This script is built in **[Docker](https://www.docker.com/products/docker-desktop/)**, make sure you have this installed before run it.
+This app is built in **[Docker](https://www.docker.com/products/docker-desktop/)**, make sure you have this installed before run it.
 
 Clone `main` branch from my **[repo](https://github.com/joaobotelho072002/joaobotelho072002.github.io)**.
 
