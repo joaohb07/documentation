@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - gh-pages
     paths:
       - docs/
 jobs:
