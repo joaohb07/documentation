@@ -1,7 +1,7 @@
 site_name: My Projects
 nav:
   - index.md
-  - Overview: getting-started.md
+  - Overview: documentation_overview.md
   - Python:
     - python/snake_game/snake.md
     - python/walk_dir/walk_dir.md
