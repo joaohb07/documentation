@@ -19,7 +19,7 @@ hide:
 <div class="container" markdown>
 <div class="description" markdown>
 
-<h1 class="title"><b>Welcome to my Projects Documentation</b></h1>
+<h1 class="title"><b>Welcome to my Projects Documentationn</b></h1>
 
   This technical documentation serves as a knowledge center for every personal project I worked.
 
