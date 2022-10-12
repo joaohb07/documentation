@@ -9,7 +9,7 @@ hide:
     background-image: url(img/synt.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
 
   h1 {
