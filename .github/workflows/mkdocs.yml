@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'projects/docs/**'
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -13,5 +11,6 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
+      - run: cd docs
       - run: pip install mkdocs
       - run: mkdocs gh-deploy --force --clean --verbose
