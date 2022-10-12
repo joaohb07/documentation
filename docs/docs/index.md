@@ -25,7 +25,7 @@ hide:
 
 <div class="cards button-align" markdown>
 
-  [Documentation Overview](./getting-started.md){ .md-button .md-button--primary}
+  [Documentation Overview](./documentation_overview.md){ .md-button .md-button--primary}
 
 </div>
 </div>
