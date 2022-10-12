@@ -3,9 +3,6 @@ on:
   push:
     branches:
       - main
-      - gh-pages
-    paths:
-      - docs/
 jobs:
   deploy:
     runs-on: ubuntu-latest
