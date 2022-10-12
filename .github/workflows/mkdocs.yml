@@ -11,6 +11,7 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - working-directory: ./docs
       - run: pip install mkdocs
-      - run: mkdocs gh-deploy --force --clean --verbose
+      - run: |
+          cd docs
+          mkdocs gh-deploy --force --clean --verbose
