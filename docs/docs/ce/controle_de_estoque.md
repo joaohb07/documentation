@@ -36,7 +36,7 @@ Acess your web browser and enter the following link ***`http://localhost:8001/`*
 How I organized myself during the development of this app.
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffcccc', 'edgeLabelBackground':'#ffffee', 'tertiaryColor': '#fff0f0'}}}%%
+%%{init: {'logLevel': 'debug', 'theme': 'neutral', 'gitGraph': {'showBranches': true, 'showCommitLabel': false}}}%%
     gitGraph
       commit id: "main"
       commit id: "First release" type: HIGHLIGHT tag: "1.0.0"
@@ -54,6 +54,8 @@ How I organized myself during the development of this app.
       merge CE_branch
       commit id: "CE doc release" type: HIGHLIGHT tag:"2.0.1"
 ```
+
+In which CE was include in the [release ***2.0.0***](https://github.com/joaobotelho072002/joaobotelho072002.github.io/releases/tag/2.0.0) and this documentation on [release ***2.0.1***](https://github.com/joaobotelho072002/joaobotelho072002.github.io/releases/tag/2.0.1)
 
 ## Contributing
 
