@@ -4,7 +4,7 @@ My projects official repository.
 
 ## Usage
 
-[![build](https://github.com/joaobotelho072002/joaobotelho072002.github.io/actions/workflows/mkdocs.yml/badge.svg)](https://github.com/joaobotelho072002/joaobotelho072002.github.io/actions/workflows/mkdocs.yml)
+[![build and deploy - mkdocs](https://github.com/joaobotelho072002/joaobotelho072002.github.io/actions/workflows/pages-deploy.yml/badge.svg)](https://github.com/joaobotelho072002/joaobotelho072002.github.io/actions/workflows/pages-deploy.yml)
 
 To run any code in this repo, check the [documentation](https://joaobotelho072002.github.io/) about it.
 
