@@ -33,9 +33,11 @@ class WalkDir():
             
     def walk_dir(self):
         if self.path:
-            for _, dirs, filenames in os.walk(top=self.path, topdown=True):
+            for current_dir, dirs, filenames in os.walk(top=self.path, topdown=True):
                 dirs[:] = [d for d in dirs if d not in self.exclude_dir]
-                print(f'Files: {filenames}\n')
+                for file in filenames:
+                    print(f'Files paths: {current_dir}/{file}\n')
+            print(f'Files: {filenames}\n')
                     
         else:
             print(f'Invalid path: {self.path}\n')
@@ -46,12 +48,17 @@ class WalkDir():
 
 ```bash title="Sample output"
 Type your path:
-/Users/joaobotelho/Desktop/snake
+/Users/joaobotelho/projects/snake
 Type dir(s) to exclude (e.g. folder1,folder2...) or else <enter>:
-snake
-Files: ['.DS_Store', 'requirements.txt', 'snake.py', 'README.md', '.gitignore']
-```
+snake # my virtual env w/ requirements installed
+Files paths: /Users/joaobotelho/projects/snake/requirements.txt
 
+Files paths: /Users/joaobotelho/projects/snake/snake.py
+
+Files paths: /Users/joaobotelho/projects/snake/README.md
+
+Files: ['requirements.txt', 'snake.py', 'README.md']
+```
 
 ## Contributing
 
