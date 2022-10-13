@@ -6,7 +6,10 @@ nav:
     - python/snake_game/snake.md
     - python/walk_dir/walk_dir.md
     - Nootebooks:
-      - python/movies_grossing/movies.ipynb
+      - Highest movies grossing:
+        - python/movies_grossing/movies.ipynb
+        - python/movies_grossing/algorithms.ipynb
+      - python/netflix/netflix_data_analisys.ipynb
   - Web:
     - Javascript Exercises:
       - web/js_exercises/multiplication_table.md
