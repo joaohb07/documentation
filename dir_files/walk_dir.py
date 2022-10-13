@@ -8,9 +8,11 @@ class WalkDir():
             
     def walk_dir(self):
         if self.path:
-            for _, dirs, filenames in os.walk(top=self.path, topdown=True):
+            for current_dir, dirs, filenames in os.walk(top=self.path, topdown=True):
                 dirs[:] = [d for d in dirs if d not in self.exclude_dir]
-                print(f'Files: {filenames}\n')
+                for file in filenames:
+                    print(f'Files paths: {current_dir}/{file}\n')
+            print(f'Files: {filenames}\n')
                     
         else:
             print(f'Invalid path: {self.path}\n')
