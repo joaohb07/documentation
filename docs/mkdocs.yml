@@ -14,6 +14,7 @@ nav:
     - Javascript Exercises:
       - web/js_exercises/multiplication_table.md
       - web/js_exercises/calculate.md
+    - web/clock.md
   - C.E.:
     - ce/controle_de_estoque.md
     - ce/architecture.md
@@ -75,6 +76,9 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - md_in_html
 plugins:
   - search
