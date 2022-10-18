@@ -1,8 +1,7 @@
 # Multiplication Table
 
----
 
-JS script that returns the multiplication table of the input number.
+> JS script that returns the multiplication table of the input number.
 
 ## Code
 
@@ -36,7 +35,7 @@ JS script that returns the multiplication table of the input number.
       for(count = 0;count <= 10; count ++){
          result.push(n1 + "x" + count + "=" + times(n1,count));
       }
-      alert(result);
+      alert(result.join("\n"));
    }
 </script>
 
