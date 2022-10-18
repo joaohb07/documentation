@@ -16,4 +16,5 @@ jobs:
       - run: |
           cd docs
           pip install -r requirements.txt
+          mkdocs build
           mkdocs gh-deploy --force --clean --verbose
