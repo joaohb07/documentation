@@ -1,6 +1,7 @@
 # Multiplication Table
 
->JS script that returns the multiplication table of the input number.
+
+> JS script that returns the multiplication table of the input number.
 
 ## Code
 
