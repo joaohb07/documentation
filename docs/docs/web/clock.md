@@ -1,8 +1,9 @@
-# Clock 
+# Clock
 
 > A clock using javascript.
 
 ## Live Execution
+
 <style>
     .clock {
         width: 18rem;
@@ -42,7 +43,7 @@
         position: relative;
     }
     .center {
-        margin-left:auto; 
+        margin-left:auto;
         margin-right:auto;
         background-color: rgb(187,222,240,0.75);
         border:3px solid #0C090D;
@@ -94,11 +95,11 @@
         secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
         const mins = now.getMinutes();
-        const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
+        const minsDegrees = ((mins / 60) *360) + ((seconds/60)*6) + 90;
         minsHand.style.transform = `rotate(${minsDegrees}deg)`;
 
         const hour = now.getHours();
-        const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
+        const hourDegrees = ((hour / 12) *360) + ((mins/60)*30) + 90;
         hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
         document.getElementById("digital-clock-sec").innerHTML = addZero(seconds);
@@ -107,10 +108,6 @@
     }
 
     setInterval(setDate, 1000);
-
-    // setTimeout(function(){
-    //     window.location.reload();
-    // }, 100);
     setDate();
 </script>
 

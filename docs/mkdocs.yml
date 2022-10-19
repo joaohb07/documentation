@@ -24,15 +24,15 @@ nav:
 # Don't alter the following sections
 #
 #
-repo_url: https://github.com/joaobotelho072002/joaobotelho072002.github.io
-repo_name: joaobotelho072002/joaobotelho072002.github.io
+repo_url: https://github.com/joaohb07/documentation
+repo_name: documentation
 edit_uri: ""
 theme:
   name: material
   logo: img/logo.gif
   favicon: img/logo.gif
   icon:
-    repo: material/github
+    repo: fontawesome/brands/gitkraken
   features:
     - content.code.annotate
     - navigation.tabs
@@ -83,7 +83,7 @@ markdown_extensions:
 plugins:
   - search
   - mkdocs-jupyter:
-      execute: true
+      execute: false
       include_source: true
       theme: dark
 extra_css:

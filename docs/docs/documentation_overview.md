@@ -97,7 +97,7 @@ jobs:
           mkdocs gh-deploy --force --clean --verbose
 ```
 
-Afterwards, the documentation [***https://joaobotelho072002.github.io/***](https://joaobotelho072002.github.io/) is updated.
+Afterwards, the documentation site [***https://joaohb07.github.io/documentation***](https://joaohb07.github.io/documentation) is updated by `gh-pages` branch.
 
 ## Contributing
 
