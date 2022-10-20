@@ -23,6 +23,10 @@ nav:
       - c_cpp_projects/c_exercises/personal_loan.md
       - c_cpp_projects/c_exercises/product_where_from.md
       - c_cpp_projects/c_exercises/swimmer_category.md
+      - c_cpp_projects/c_exercises/gratification.md
+      - c_cpp_projects/c_exercises/raise_and_classification.md
+      - c_cpp_projects/c_exercises/raise_price.md
+      - c_cpp_projects/c_exercises/show_biggest.md
   - C.E.:
     - ce/controle_de_estoque.md
     - ce/architecture.md
@@ -91,7 +95,7 @@ markdown_extensions:
 plugins:
   - search
   - mkdocs-jupyter:
-      execute: false
+      execute: true
       include_source: true
       theme: dark
 extra_css:
