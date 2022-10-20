@@ -21,6 +21,7 @@ Make a program that receives:
     | 11 to 20      | $ 15,00    |
     | 21 to 30      | $ 20,00    |
     | 31 to 40      | $ 30,00    |
+
   - **Table Two**:
 
     | Note total price     | Discount (%) |
