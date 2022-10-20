@@ -15,6 +15,18 @@ nav:
       - web/js_exercises/multiplication_table.md
       - web/js_exercises/calculate.md
     - web/clock.md
+  - C/C++:
+    - C Exercises:
+      - c_cpp_projects/c_exercises/discount_calculation.md
+      - c_cpp_projects/c_exercises/ideal_weight.md
+      - c_cpp_projects/c_exercises/operations.md
+      - c_cpp_projects/c_exercises/personal_loan.md
+      - c_cpp_projects/c_exercises/product_where_from.md
+      - c_cpp_projects/c_exercises/swimmer_category.md
+      - c_cpp_projects/c_exercises/gratification.md
+      - c_cpp_projects/c_exercises/raise_and_classification.md
+      - c_cpp_projects/c_exercises/raise_price.md
+      - c_cpp_projects/c_exercises/show_biggest.md
   - C.E.:
     - ce/controle_de_estoque.md
     - ce/architecture.md
