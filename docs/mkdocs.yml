@@ -95,7 +95,7 @@ markdown_extensions:
 plugins:
   - search
   - mkdocs-jupyter:
-      execute: true
+      execute: false
       include_source: true
       theme: dark
 extra_css:
