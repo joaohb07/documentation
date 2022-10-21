@@ -3,22 +3,17 @@
 >A simple script developed using python and the `os` library.
 
 ## Installation
+!!! tip "Python"
+    This script is developed in ***[python3.7 >](https://www.python.org/downloads/)***, make sure you have this installed before run it.
 
-This script is developed in ***[python3.7 >](https://www.python.org/downloads/)***, make sure you have this installed before run it.
-
-Clone `main` branch from my ***[repo](https://github.com/joaobotelho072002/joaobotelho072002.github.io)***.
+Clone `main` branch from my ***[python-projects repo](https://github.com/joaohb07/python-projects)***.
 
 ## Usage
 
-Access `dir_files` folder:
+Access `dir_files` folder and execute the script:
 
-```bash
-cd dir_files
-```
-
-How to run the script:
-
-```bash
+```bash title="Execute return directory files script"
+cd python-projects/scripts/dir_files
 python3 run.py
 ```
 
@@ -32,33 +27,36 @@ class WalkDir():
         self.exclude_dir = [input("Type dir(s) to exclude (e.g. folder1,folder2...) or else <enter>:\n")]
             
     def walk_dir(self):
-        if self.path:
+        if os.path.isdir(self.path):
             for current_dir, dirs, filenames in os.walk(top=self.path, topdown=True):
                 dirs[:] = [d for d in dirs if d not in self.exclude_dir]
                 for file in filenames:
                     print(f'Files paths: {current_dir}/{file}\n')
             print(f'Files: {filenames}\n')
+            return filenames
                     
         else:
             print(f'Invalid path: {self.path}\n')
+            return  None
 ```
 
 > The script above simply inputs: a path from the user and dir(s) to exclude, then it prints the file(s) name(s),
 > ***[repo](#installation)***.
 
-```bash title="Sample output"
-Type your path:
-/Users/joaobotelho/projects/snake
-Type dir(s) to exclude (e.g. folder1,folder2...) or else <enter>:
-snake # my virtual env w/ requirements installed
-Files paths: /Users/joaobotelho/projects/snake/requirements.txt
+???+ example
+    ```bash title="Sample output"
+    Type your path:
+    /Users/joaobotelho/projects/snake
+    Type dir(s) to exclude (e.g. folder1,folder2...) or else <enter>:
+    snake # my virtual env w/ requirements installed
+    Files paths: /Users/joaobotelho/projects/snake/requirements.txt
 
-Files paths: /Users/joaobotelho/projects/snake/snake.py
+    Files paths: /Users/joaobotelho/projects/snake/snake.py
 
-Files paths: /Users/joaobotelho/projects/snake/README.md
+    Files paths: /Users/joaobotelho/projects/snake/README.md
 
-Files: ['requirements.txt', 'snake.py', 'README.md']
-```
+    Files: ['requirements.txt', 'snake.py', 'README.md']
+    ```
 
 ## Contributing
 

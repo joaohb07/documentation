@@ -17,7 +17,7 @@ To create this documentation I used [***mkdocs***](https://www.mkdocs.org/), a s
 Folder structure:
 
 ```bash
-projects
+documentation
 │   ...
 │   ...   
 │
@@ -30,17 +30,17 @@ projects
 │       │   {documentation files} # folders and Markdown files
 ```
 
-I created and activated a new python virtual environment.
-
-```bash title="Create and activate a python virtual environment"
-python3 -m venv <venv_name>
-source <venv_name>/bin/activate
-```
+???+ quote "Optional Step"
+    I created and activated a new python virtual environment.
+    ```bash title="Create and activate a python virtual environment"
+    python3 -m venv <venv_name>
+    source <venv_name>/bin/activate
+    ```
 
 Used the package manager [***pip***](https://pip.pypa.io/en/stable/) to install requirements.
 
 ```bash title="Install the requirements"
-cd projects/docs/
+cd documentation/docs/
 pip install -r requirements.txt
 ```
 
