@@ -4,26 +4,29 @@
 
 For developing this simple snake game I used ***[pygame](https://www.pygame.org/docs/)*** library.
 
-***[Snake Game code](https://github.com/joaobotelho072002/joaobotelho072002.github.io/tree/main/snake)***, the result looks like this:
+***[Snake Game code](https://github.com/joaohb07/python-projects/tree/main/game/snake)***, the result looks like this:
 
 <div class="image-align" markdown> ![gif](../../img/snakepy.gif) </div>
 
 ## Installation
 
-This script is developed in ***[python3.7 >](https://www.python.org/downloads/)***, make sure you have this installed before run it.
+!!! tip "Python"
+    This script is developed in ***[python3.7 >](https://www.python.org/downloads/)***, make sure you have this installed before run it.
 
-- Clone `main` branch from my ***[repo](https://github.com/joaobotelho072002/joaobotelho072002.github.io)***.
+1. Clone `main` branch from my ***[python-projects repo](https://github.com/joaohb07/python-projects)***.
 
-- Create and activate a new python virtual environment.
+2. Use the package manager ***[pip](https://pip.pypa.io/en/stable/)*** to install requirements.
 
-    ```bash
-    python3 -m venv <venv_name>
-    source <venv_name>/bin/activate
-    ```
+    ???+ quote "Optional step"
+        This is an optional step, it is not needed.
 
-- Use the package manager ***[pip](https://pip.pypa.io/en/stable/)*** to install requirements.
+        ```bash title="Create virtual environment"
+        python3 -m venv <venv_name>
+        source <venv_name>/bin/activate
+        ```
 
-    ```bash
+    ```bash title="Install requirements"
+    cd python-projects/game/snake
     pip install -r requirements.txt
     ```
 
@@ -31,7 +34,8 @@ This script is developed in ***[python3.7 >](https://www.python.org/downloads/)*
 
 How to run snake game after activating the virtual environment:
 
-```bash
+```bash title="Execute snake game" 
+cd python-projects/game/snake
 python3 snake.py
 ```
 
