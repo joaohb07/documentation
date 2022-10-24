@@ -17,7 +17,7 @@ To create this documentation I used [***mkdocs***](https://www.mkdocs.org/), a s
 Folder structure:
 
 ```bash
-projects
+documentation
 │   ...
 │   ...   
 │
@@ -40,7 +40,7 @@ source <venv_name>/bin/activate
 Used the package manager [***pip***](https://pip.pypa.io/en/stable/) to install requirements.
 
 ```bash title="Install the requirements"
-cd projects/docs/
+cd documentation/docs/
 pip install -r requirements.txt
 ```
 
