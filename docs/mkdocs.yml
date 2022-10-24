@@ -32,7 +32,10 @@ nav:
       - c_cpp_projects/c_exercises/raise_and_classification.md
       - c_cpp_projects/c_exercises/raise_price.md
       - c_cpp_projects/c_exercises/show_biggest.md
+      - c_cpp_projects/c_exercises/data_collection.md
+      - c_cpp_projects/c_exercises/tic_tac_toe.md
     - c_cpp_projects/confectionery/confectionery.md
+    - c_cpp_projects/service_provider/service_provider.md
   - C.E.:
     - ce/controle_de_estoque.md
     - ce/architecture.md
