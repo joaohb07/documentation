@@ -3,13 +3,18 @@ nav:
   - index.md
   - Overview: documentation_overview.md
   - Python:
-    - python/snake_game/snake.md
-    - python/walk_dir/walk_dir.md
+    - python/python_projects.md
+    - Game:
+      - python/snake_game/snake.md
+    - Scripts:
+      - python/walk_dir/walk_dir.md
     - Nootebooks:
       - Highest movies grossing:
         - python/movies_grossing/movies.ipynb
         - python/movies_grossing/algorithms.ipynb
       - python/netflix/netflix_data_analisys.ipynb
+    - Unit Tests:
+      - python/unit_tests/unit_tests.md
   - Web:
     - Javascript Exercises:
       - web/js_exercises/multiplication_table.md
@@ -79,6 +84,7 @@ theme:
         icon: material/lightbulb-outline
         name: Switch to light mode
 markdown_extensions:
+  - admonition
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.snippets
