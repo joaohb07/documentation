@@ -34,9 +34,9 @@ For developing this simple snake game I used ***[pygame](https://www.pygame.org/
 
 How to run snake game after activating the virtual environment:
 
-```bash title="Execute snake game" 
-cd python-projects/game/snake
-python3 snake.py
+```bash title="Execute snake game"
+    cd python-projects/game/snake
+    python3 snake.py
 ```
 
 ## Contributing
