@@ -20,6 +20,13 @@ Install the package with its dependencies (You must execute this in `notes-app` 
 npm install
 ```
 
+### Packages Used
+
+1. [Chalk](https://www.npmjs.com/package/chalk) - Format output
+2. [Yargs](https://www.npmjs.com/package/yargs) - Parse Arguments
+3. [Mocha](https://mochajs.org/) - Unit Tests
+4. [Chai](https://www.chaijs.com/) - Unit Tests
+
 ## Usage
 
 ### Add a Note
@@ -57,6 +64,45 @@ To list notes just run the following command:
 node app.js list 
 # This will list all your notes stored in notes.json file
 ```
+
+### Testing
+
+To execute Unit Tests run the following command:
+
+```bash title="Unit Tests"
+npm test
+```
+
+???+ tip "Unit Test Workflow"
+    Here is the unit test workflow that runs unit tests:
+    ```yaml title="unit-tests.yml"
+    name: Node.js CI
+
+    on:
+    push:
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
+
+    jobs:
+    build:
+
+        runs-on: ubuntu-latest
+
+        strategy:
+        matrix:
+            node-version: [14.x, 16.x, 18.x]
+
+        steps:
+        - uses: actions/checkout@v3
+        - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+            node-version: ${{ matrix.node-version }}
+            cache: 'npm'
+        - run: npm install
+        - run: npm test
+    ```
 
 ### Help
 
