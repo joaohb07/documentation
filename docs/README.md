@@ -1,4 +1,4 @@
-# Python Projects Repo Documentation
+# My Projects Documentation
 
 For developing this simple documentation I used [mkdocs](https://www.mkdocs.org/) lib with [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) theme.Mkdocs requires a recent version of python, I used [***python3.7***](https://www.python.org/downloads/). Check [***https://joaobotelho072002.github.io/***](https://joaobotelho072002.github.io/) for live visualization.
 
