@@ -1,8 +1,14 @@
 # Weather App
 
-[![Deploy on Heroku](https://github.com/joaohb07/weather-app/actions/workflows/heroku-deploy.yml/badge.svg)](https://github.com/joaohb07/weather-app/actions/workflows/heroku-deploy.yml)
+<p align="left">
+  <a href="https://github.com/joaohb07/weather-app/actions/workflows/heroku-deploy.yml">
+    <img alt="Actions Workflow" src="https://github.com/joaohb07/weather-app/actions/workflows/heroku-deploy.yml/badge.svg"/>
+  </a>
+  <a href="https://botelho-web-weather-app.herokuapp.com/">
+    <img alt="Heroku" src="https://pyheroku-badge.herokuapp.com/?app=botelho-web-weather-app&style=plastic" />
+  </a>
 
-![Heroku](https://pyheroku-badge.herokuapp.com/?app=botelho-web-weather-app&style=plastic)
+</p>
 
 > Check out weather information about a specific location!
 

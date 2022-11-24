@@ -16,6 +16,9 @@ nav:
     - Unit Tests:
       - python/unit_tests/unit_tests.md
   - Web:
+    - Task App:
+      - web/task_app/task_app.md
+      - web/task_app/task_app_endpoints.md
     - web/weather_app/weather_app.md
     - web/notes_app/notes_app.md
     - web/book_tracker/book_tracker.md
