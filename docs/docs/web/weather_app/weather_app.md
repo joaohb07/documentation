@@ -12,7 +12,7 @@
 
 > Check out weather information about a specific location!
 
-A weather app using [**Node.js**](https://nodejs.org/en/). To run this locally, make sure you have this installed.
+A weather app using [**Node.js**](https://nodejs.org/en/). To run this locally, make sure you have this installed. Check out the source code in [***weather app github repository***](https://github.com/joaohb07/weather-app).
 
 ## Live Preview
 
@@ -26,7 +26,7 @@ Access my official projects [**documentation**](https://joaohb07.github.io/docum
 
 To install dependencies to run this code locally, follow these steps:
 
-1. Clone `main` branch from this repo:
+1. Clone `main` branch from this [***repo***](https://github.com/joaohb07/weather-app):
 
     ```bash
     git clone <repo-url>

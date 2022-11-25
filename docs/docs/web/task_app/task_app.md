@@ -12,6 +12,8 @@
 
 > A Task manager App using Node.js with mongoDB for database.
 
+A simple Task manager app I developed with Node.js and used MongoDB for storing data and use it in the application. Check out the source code in [***task app github repository***](https://github.com/joaohb07/task-app/).
+
 ## Live Preview
 
 Check this [***app***](https://botelho-web-task-app.herokuapp.com/) live preview on heroku.
@@ -51,7 +53,7 @@ To install dependencies to run this code locally, follow these steps:
 1. Clone `backend` [branch](https://github.com/joaohb07/task-app/tree/backend) from this repo:
 
     ```bash
-    git clone https://github.com/joaohb07/task-app/tree/backend
+    git clone <repo-backend-branch-url>
     cd task-app
     ```
 
