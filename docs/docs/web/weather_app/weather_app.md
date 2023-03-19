@@ -1,11 +1,8 @@
 # Weather App
 
 <p align="left">
-  <a href="https://github.com/joaohb07/weather-app/actions/workflows/heroku-deploy.yml">
-    <img alt="Actions Workflow" src="https://github.com/joaohb07/weather-app/actions/workflows/heroku-deploy.yml/badge.svg"/>
-  </a>
-  <a href="https://botelho-web-weather-app.herokuapp.com/">
-    <img alt="Heroku" src="https://pyheroku-badge.herokuapp.com/?app=botelho-web-weather-app&style=plastic" />
+  <a href="https://weather-app-ix73.onrender.com">
+    <img alt="Heroku" src="https://badgen.net/badge/icon/Live Preview?icon=terminal&label&color=black" />
   </a>
 
 </p>
@@ -16,7 +13,7 @@ A weather app using [**Node.js**](https://nodejs.org/en/). To run this locally, 
 
 ## Live Preview
 
-Check out the [***app***](https://botelho-web-weather-app.herokuapp.com/) deployed by heroku.
+Check out the [***app***](https://weather-app-ix73.onrender.com) deployed by render.
 
 ## Documentation
 
