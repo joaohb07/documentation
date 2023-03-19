@@ -12,8 +12,6 @@
     <br>
 </div>
 
----
-
 ## Usage
 
 Check [***documentation***](https://joaohb07.github.io/documentation) about it.
