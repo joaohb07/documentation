@@ -45,7 +45,7 @@
     </a>
     <br>
     <br>
-    <p> My personal projects documentation repository.<p>
+    <p> My personal projects documentation repository.</p>
 </div>
 
 ---
