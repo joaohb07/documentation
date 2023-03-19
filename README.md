@@ -1,8 +1,6 @@
 <div align="center">
     <img width="100" height="100" src="docs/docs/img/logo.gif"/>
     <br>
-    <h1>My Personal Projects</h1>
-    <br>
     <a href="https://github.com/joaobotelho072002/joaobotelho072002.github.io/actions/workflows/pages-deploy.yml">
         <img src="https://github.com/joaobotelho072002/joaobotelho072002.github.io/actions/workflows/pages-deploy.yml/badge.svg"/>
     </a>
@@ -11,6 +9,8 @@
     </a>
     <br>
 </div>
+
+# My Personal Projects
 
 ## Usage
 
