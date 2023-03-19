@@ -1,13 +1,10 @@
+
 # Task App
 
 <p align="left">
-  <a href="https://github.com/joaohb07/task-app/actions/workflows/heroku-deploy.yml">
-    <img alt="Actions Workflow" src="https://github.com/joaohb07/task-app/actions/workflows/heroku-deploy.yml/badge.svg"/>
-  </a>
-  <a href="https://botelho-web-task-app.herokuapp.com/">
-    <img alt="Heroku" src="https://pyheroku-badge.herokuapp.com/?app=botelho-web-task-app&style=plastic" />
-  </a>
-
+    <a href="https://task-app-36a0.onrender.com">
+      <img alt="Actions Workflow" src="https://badgen.net/badge/icon/Live Preview?icon=terminal&label&color=black"/>
+    </a>
 </p>
 
 > A Task manager App using Node.js with mongoDB for database.
@@ -16,7 +13,7 @@ A simple Task manager app I developed with Node.js and used MongoDB for storing 
 
 ## Live Preview
 
-Check this [***app***](https://botelho-web-task-app.herokuapp.com/) live preview on heroku.
+Check this [***app***](https://task-app-36a0.onrender.com) live preview on render.
 
 ## Technologies
 
@@ -27,7 +24,7 @@ Technologies I used to develop this App.
 |[***Node.js***](https://nodejs.org/)|App BackEnd.|
 |[***MongoDB***](https://www.mongodb.com/)|Local DataBase set.|
 |[***MongoDB Atlas***](https://www.mongodb.com/atlas/database)|Multicloud DataBase remote set, to link with Heroku deployment.|
-|[***Heroku***](heroku.com)|Deploy App.|
+|[***Render***](https://render.com/)|Deploy App.|
 |[***Express***](https://expressjs.com/)|Create Web Server.|
 |[***Mongoose***](https://mongoosejs.com/)|Execute DB Operations.|
 |[***sendgrid/mail for SendGrid API***](https://sendgrid.com/solutions/email-api/)|For sending emails to user (only sends when creating an user or deleting an user).|
