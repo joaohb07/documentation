@@ -3,3 +3,4 @@ docs/site
 snake/snake
 dir_files/__pycache__
 **/.DS_Store
+.vscode
