@@ -4,7 +4,6 @@
   <a href="https://weather-app-ix73.onrender.com">
     <img alt="Heroku" src="https://badgen.net/badge/icon/Live Preview?icon=terminal&label&color=black" />
   </a>
-
 </p>
 
 > Check out weather information about a specific location!
