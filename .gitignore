@@ -1,4 +1,5 @@
 docs/pages
+docs/.cache
 docs/site
 snake/snake
 dir_files/__pycache__
