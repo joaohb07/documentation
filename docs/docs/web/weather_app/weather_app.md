@@ -1,5 +1,4 @@
 # Weather App
-**Full Stack System Architecture**
 
 <p align="left">
   <a href="https://jhbserver.tail4bcb71.ts.net/weather-app/" target="_blank">
@@ -16,14 +15,14 @@
 
 ---
 
-## 🔗 Quick Links
+## Quick Links
 
 * **Live Production App:** [https://jhbserver.tail4bcb71.ts.net/weather-app/](https://jhbserver.tail4bcb71.ts.net/weather-app/)
 * **Source Code Repository:** [github.com/joaohb07/weather-app](https://github.com/joaohb07/weather-app)
 
 ---
 
-## 🏗️ System Architecture & Infrastructure
+## System Architecture & Infrastructure
 
 Unlike simple static deployments, this application is engineered to run as an isolated, production-grade microservice within a private Ubuntu home-lab cloud, exposed securely to the public internet without opening router ports (bypassing CGNAT).
 
@@ -58,7 +57,7 @@ flowchart LR
 
 ---
 
-## 🛠️ Tech Stack & Engineering Breakdown
+## Tech Stack & Engineering Breakdown
 
 ### Backend & API Orchestration
 * **Node.js (v22) & Express:** Lightweight, event-driven HTTP server exposing a unified `/weather` endpoint that orchestrates sequential external API calls (`Geocode ➔ Forecast`) with structured error handling and query sanitization.
@@ -77,7 +76,7 @@ flowchart LR
 
 ---
 
-## 📡 API Reference
+## API Reference
 
 ### `GET /weather`
 
@@ -112,7 +111,7 @@ curl "https://jhbserver.tail4bcb71.ts.net/weather-app/weather?address=Porto&lang
 
 ---
 
-## 🚀 Local Setup & Execution
+## Local Setup & Execution
 
 ### Prerequisites
 * **Docker & Docker Compose** *(recommended)* or **Node.js v20+**
@@ -156,7 +155,7 @@ npm --prefix client run dev
 
 ---
 
-## 🧪 Running the Test Suite
+## Running the Test Suite
 
 ```bash
 # Run backend unit & integration tests (Jest)
