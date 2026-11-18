@@ -137,7 +137,7 @@ All REST endpoints are prefixed under `/api` and can be imported directly into P
 ## Local Setup & Execution
 
 ### Prerequisites
-* **Docker & Docker Compose** *(recommended)* or **Node.js v22+** with a local **MongoDB** instance.
+* **Docker & Docker Compose**
 
 ### 1. Clone & Configure Environment
 
@@ -171,20 +171,6 @@ docker compose up -d --build
 ```
 
 *(Note: To access directly at `http://localhost:3000` without a reverse proxy, uncomment the `ports` mappings in `docker-compose.yml`.)*
-
-### 3. Run Natively (Development Mode)
-
-```bash
-# Install backend and frontend dependencies
-npm install
-npm --prefix client install
-
-# Terminal 1: Start Express API (http://localhost:3000)
-npm run dev
-
-# Terminal 2: Start Vite Dev Server with /api proxy (http://localhost:5173)
-npm --prefix client run dev
-```
 
 ---
 
