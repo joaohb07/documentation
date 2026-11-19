@@ -1,4 +1,4 @@
-# Task Manager App
+# Task App
 
 <p align="left">
   <a href="https://jhbserver.tail4bcb71.ts.net/task-app/" target="_blank">
@@ -110,27 +110,49 @@ flowchart LR
 
 ---
 
-## API Endpoints & Postman Collection
+## API Reference
 
-All REST endpoints are prefixed under `/api` and can be imported directly into Postman using the **`postman-collection.json`** file in the repository root.
+All REST endpoints are mounted under `/api`. Protected routes require a valid `Authorization: Bearer <token>` header. You can also import `postman-collection.json` from the repository root for ready-to-run requests.
 
-| Resource | Method | Endpoint | Auth | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| **Users** | `POST` | `/api/users` | No | Register a new user account and return JWT token |
-| **Users** | `POST` | `/api/users/login` | No | Authenticate credentials and issue session token |
-| **Users** | `POST` | `/api/users/logout` | Yes | Revoke current active session token |
-| **Users** | `POST` | `/api/users/logoutAll` | Yes | Revoke all active tokens across all devices |
-| **Users** | `GET` | `/api/users/me` | Yes | Retrieve authenticated user profile |
-| **Users** | `PATCH` | `/api/users/me` | Yes | Update user fields (`name`, `email`, `age`, `password`) |
-| **Users** | `DELETE` | `/api/users/me` | Yes | Permanently delete account and cascade-delete tasks |
-| **Avatars** | `POST` | `/api/users/me/avatar` | Yes | Upload & resize profile avatar (`multipart/form-data`) |
-| **Avatars** | `GET` | `/api/users/me/avatar` | Yes | Stream authenticated user's PNG avatar |
-| **Avatars** | `DELETE` | `/api/users/me/avatar` | Yes | Remove stored user avatar |
-| **Tasks** | `POST` | `/api/tasks` | Yes | Create a new task |
-| **Tasks** | `GET` | `/api/tasks` | Yes | List tasks (`?completed=`, `?limit=`, `?skip=`, `?sortBy=`) + KPI stats |
-| **Tasks** | `GET` | `/api/tasks/:id` | Yes | Fetch a single task by ID |
-| **Tasks** | `PATCH` | `/api/tasks/:id` | Yes | Update task `description` or `completed` status |
-| **Tasks** | `DELETE` | `/api/tasks/:id` | Yes | Delete a specific task |
+### Users & Authentication
+
+| Method | Endpoint | Auth | Description |
+| :--- | :--- | :---: | :--- |
+| `POST` | `/api/users` | No | Register a new user account and return user data + JWT token |
+| `POST` | `/api/users/login` | No | Authenticate with email and password and return user data + JWT token |
+| `POST` | `/api/users/logout` | Yes | Invalidate the token used in the current session |
+| `POST` | `/api/users/logoutAll` | Yes | Clear all active session tokens for the authenticated user |
+| `GET` | `/api/users/me` | Yes | Fetch the authenticated user's profile |
+| `PATCH` | `/api/users/me` | Yes | Update allowed profile fields (`name`, `email`, `password`, `age`) |
+| `DELETE` | `/api/users/me` | Yes | Delete the authenticated user account and trigger farewell email |
+
+### User Avatars
+
+| Method | Endpoint | Auth | Description |
+| :--- | :--- | :---: | :--- |
+| `POST` | `/api/users/me/avatar` | Yes | Upload a JPEG, JPG, or PNG image (up to 1 MB), resized to 250x250 PNG |
+| `GET` | `/api/users/me/avatar` | Yes | Retrieve the authenticated user's PNG avatar binary |
+| `GET` | `/api/users/:id/avatar` | No | Retrieve a user's PNG avatar binary by user ID |
+| `DELETE` | `/api/users/me/avatar` | Yes | Remove the authenticated user's stored avatar |
+
+### Tasks
+
+| Method | Endpoint | Auth | Description |
+| :--- | :--- | :---: | :--- |
+| `POST` | `/api/tasks` | Yes | Create a task with description, optional details, `dueDate`, priority (`none`, `low`, `medium`, `high`), status (`todo`, `wip`, `done`), subtasks, completed, and validated tags IDs |
+| `GET` | `/api/tasks` | Yes | List tasks with query filters (`completed`, `status`, `tag`, `priority`), sorting (`sortBy`, including `priority`), pagination (`limit`, `skip`), and stats (`total`, `completed`, `pending`) |
+| `GET` | `/api/tasks/:id` | Yes | Fetch a single task owned by the authenticated user with populated tags |
+| `PATCH` | `/api/tasks/:id` | Yes | Update description, details, `dueDate`, priority, status, subtasks, completed, or tags |
+| `DELETE` | `/api/tasks/:id` | Yes | Delete a task owned by the authenticated user |
+
+### Tags
+
+| Method | Endpoint | Auth | Description |
+| :--- | :--- | :---: | :--- |
+| `POST` | `/api/tags` | Yes | Create a unique tag (`name`, optional `color`, default `'blue'`) for the user |
+| `GET` | `/api/tags` | Yes | List user tags sorted by name with optional search, limit (default 50), and skip (default 0) |
+| `PATCH` | `/api/tags/:id` | Yes | Update a tag's name (enforcing case-insensitive uniqueness per user) and/or color |
+| `DELETE` | `/api/tags/:id` | Yes | Delete a tag and pull its reference from all tasks belonging to the user |
 
 ---
 
@@ -181,8 +203,8 @@ docker compose up -d --build
 npm test
 
 # Frontend Cypress Component Tests (headless)
-npm --prefix client run test:component
+npm run test:component
 
 # Frontend Cypress E2E Tests (headless, requires dev/preview server on :5173)
-npm --prefix client run test:e2e
+npm run test:e2e
 ```
