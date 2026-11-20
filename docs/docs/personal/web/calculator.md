@@ -4,8 +4,6 @@
 
 ## Live Execution
 
-<link rel="stylesheet" href="calculator.css">
-
 <center>
     <div class="calculator">
         <div class="display">
@@ -36,7 +34,7 @@
         </div>
     </div>
 </center>
-<script src="calculator.js"></script>
+<script src="../../javascript/calculator.js"></script>
 
 ## Code
 

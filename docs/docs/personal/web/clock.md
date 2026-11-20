@@ -4,8 +4,6 @@
 
 ## Live Execution
 
-<link rel="stylesheet" href="clock.css">
-
 <div class="clock">
     <div class="clock-face">
         <div class="hand hour-hand"></div>
@@ -23,7 +21,7 @@
     </div>
 </div>
 
-<script src="clock.js"></script>
+<script src="../../javascript/clock.js"></script>
 
 ## Code
 

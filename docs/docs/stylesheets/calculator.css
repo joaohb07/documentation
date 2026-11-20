@@ -17,6 +17,7 @@
 .input{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-color: black;
 }
 
 .calc-btn{
@@ -24,6 +25,7 @@
     background-color: white;
     padding: 0.8rem;
     font-size: 17px;
+    color: black;
     transition: all 0.3s ease-in-out;
     -webkit-transition : background-color 500ms ease-out;
     -moz-transition : background-color 500ms ease-out;

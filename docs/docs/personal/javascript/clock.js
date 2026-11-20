@@ -1,4 +1,5 @@
-const secondHand = document.querySelector('.second-hand');
+(() => {
+    const secondHand = document.querySelector('.second-hand');
     const minsHand = document.querySelector('.min-hand');
     const hourHand = document.querySelector('.hour-hand');
 
@@ -31,5 +32,12 @@ const secondHand = document.querySelector('.second-hand');
         document.getElementById("digital-clock-hour").innerHTML = addZero(hour);
     }
 
-    setInterval(setDate, 1000);
+    const interval = setInterval(() => {
+        if (!secondHand.isConnected) {
+            clearInterval(interval);
+            return;
+        }
+        setDate();
+    }, 1000);
     setDate();
+})();
