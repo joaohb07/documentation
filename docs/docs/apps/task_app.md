@@ -29,7 +29,7 @@
 The application runs as a decoupled, multi-container service inside a private Ubuntu home-lab environment, isolated across dedicated Docker bridge networks and securely exposed to the internet without opening router ports (bypassing CGNAT).
 
 ```mermaid
-flowchart LR
+flowchart TD
     Client["🌐 Browser / Client<br/>(HTTPS Request)"] --> Funnel["🔒 Tailscale Funnel<br/>(TLS Termination :443)"]
     Funnel --> NPM["🔀 Nginx Proxy Manager<br/>(Reverse Proxy :80)"]
     NPM -->|"Subpath Rewrite<br/>/task-app/ ➔ /"| App["🐳 task-app Container<br/>(Node 22 Alpine :3000)"]
@@ -70,7 +70,7 @@ flowchart LR
 Every pull request and merge to `main` is governed by a two-stage GitHub Actions workflow:
 
 ```mermaid
-flowchart LR
+flowchart TD
     PR["📝 Pull Request / Push to main"] --> CI["🧪 CI Workflow (ci.yml)"]
 
     subgraph QualityGates ["Automated Quality Gates"]

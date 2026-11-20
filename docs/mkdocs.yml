@@ -7,6 +7,10 @@ nav:
     - apps/weather_app.md
   - Academic Projects:
     - academic/mypas.md
+    - academic/parallel.md
+    - academic/mms_simulator.md
+    - academic/mysh.md
+    - academic/wsn.md
   - Personal Projects:
     - Web:
       - personal/web/clock.md

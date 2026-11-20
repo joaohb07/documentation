@@ -27,7 +27,7 @@
 Unlike simple static deployments, this application is engineered to run as an isolated, production-grade microservice within a private Ubuntu home-lab cloud, exposed securely to the public internet without opening router ports (bypassing CGNAT).
 
 ```mermaid
-flowchart LR
+flowchart TD
     Client["🌐 Browser / Client<br/>(HTTPS Request)"] --> Funnel["🔒 Tailscale Funnel<br/>(TLS Termination :443)"]
     Funnel --> NPM["🔀 Nginx Proxy Manager<br/>(Reverse Proxy :80)"]
     NPM -->|"Subpath Rewrite<br/>/weather-app/ ➔ /"| App["🐳 Docker Container<br/>(weather-app :3000)"]

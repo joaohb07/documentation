@@ -1,5 +1,5 @@
 # MyPas Compiler
-> Recursive Descent LL(1) Pascal Compiler
+**Recursive Descent LL(1) Pascal Compiler**
 
 <p align="left">
   <a href="https://github.com/joaohb07/mypas" target="_blank">
