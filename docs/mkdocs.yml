@@ -22,6 +22,7 @@ nav:
           - personal/python/movies_grossing/movies.ipynb
           - personal/python/movies_grossing/algorithms.ipynb
         - personal/python/netflix/netflix_data_analisys.ipynb
+        - personal/python/strokes/strokes.ipynb
     - C/C++:
       - personal/c_cpp_projects/confectionery/confectionery.md
       - personal/c_cpp_projects/service_provider/service_provider.md
