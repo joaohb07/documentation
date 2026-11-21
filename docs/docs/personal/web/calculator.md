@@ -1,74 +1,44 @@
 # Calculator
 
-> A calculator built using javascript and css.
+> Interactive arithmetic calculator built with vanilla JavaScript and CSS Grid, featuring a safe Shunting-Yard expression parser (zero `eval()`), operator precedence, parentheses support, and keyboard navigation.
 
 ## Live Execution
 
-<center>
-    <div class="calculator">
+<div class="calc-wrapper">
+    <div class="calculator" tabindex="0" aria-label="Interactive Calculator">
         <div class="display">
             <div class="output"></div>
             <div class="result">0</div>
         </div>
         <div class="input">
-            <button class="calc-btn">AC</button>
-            <button class="calc-btn">(</button>
-            <button class="calc-btn">)</button>
-            <button class="calc-btn">+</button>
-            <button class="calc-btn">7</button>
-            <button class="calc-btn">8</button>
-            <button class="calc-btn">9</button>
-            <button class="calc-btn">-</button>
-            <button class="calc-btn">4</button>
-            <button class="calc-btn">5</button>
-            <button class="calc-btn">6</button>
-            <button class="calc-btn">*</button>
-            <button class="calc-btn">1</button>
-            <button class="calc-btn">2</button>
-            <button class="calc-btn">3</button>
-            <button class="calc-btn">/</button>
-            <button class="calc-btn">DEL</button>
-            <button class="calc-btn">0</button>
-            <button class="calc-btn">.</button>
-            <button class="calc-btn">=</button>
+            <button type="button" class="calc-btn calc-btn--danger" data-value="AC">AC</button>
+            <button type="button" class="calc-btn calc-btn--op" data-value="(">(</button>
+            <button type="button" class="calc-btn calc-btn--op" data-value=")">)</button>
+            <button type="button" class="calc-btn calc-btn--op" data-value="+">+</button>
+
+            <button type="button" class="calc-btn" data-value="7">7</button>
+            <button type="button" class="calc-btn" data-value="8">8</button>
+            <button type="button" class="calc-btn" data-value="9">9</button>
+            <button type="button" class="calc-btn calc-btn--op" data-value="-">-</button>
+
+            <button type="button" class="calc-btn" data-value="4">4</button>
+            <button type="button" class="calc-btn" data-value="5">5</button>
+            <button type="button" class="calc-btn" data-value="6">6</button>
+            <button type="button" class="calc-btn calc-btn--op" data-value="*">×</button>
+
+            <button type="button" class="calc-btn" data-value="1">1</button>
+            <button type="button" class="calc-btn" data-value="2">2</button>
+            <button type="button" class="calc-btn" data-value="3">3</button>
+            <button type="button" class="calc-btn calc-btn--op" data-value="/">÷</button>
+
+            <button type="button" class="calc-btn calc-btn--danger" data-value="DEL">DEL</button>
+            <button type="button" class="calc-btn" data-value="0">0</button>
+            <button type="button" class="calc-btn" data-value=".">.</button>
+            <button type="button" class="calc-btn calc-btn--equal" data-value="=">=</button>
         </div>
     </div>
-</center>
+</div>
+
 <script src="../../javascript/calculator.js"></script>
 
-## Code
-
-> How I built the calculator with javascript
-
-```javascript title="Calculator javascript"
-const keys = document.querySelectorAll("button");
-
-//eventlistener
-keys.forEach(key=>{
-    key.addEventListener("click",calculate);
-});
-
-function calculate(){
-    let buttonText = this.innerText;
-    if(buttonText==="AC"){
-        output.innerText = "";
-        result.innerText = "0";
-        result.style.animation = "";
-        output.style.animation = "";
-        return;
-    }else if(buttonText === "DEL"){
-        output.textContent = output.textContent.substr(0,output.textContent.length-1);
-        return;
-    }else if(buttonText === "="){
-        result.innerText = eval(output.innerText);
-        result.style.animation = "big 0.5s ease-in-out";
-        output.style.animation = "small 0.5s ease-in-out";
-        result.style.animationFillMode = "forwards";
-        output.style.animationFillMode = "forwards";
-        output.innerText = "";
-    }else{
-        output.textContent += buttonText;
-        return;
-    } 
-}
-```
+* **Continuous Calculations & Keyboard Support:** Click the calculator to type directly via keyboard (`0-9`, `+`, `-`, `*`, `/`, `(`, `)`, `Enter`, `Backspace`, `Esc`), or chain operations directly onto the previous result.

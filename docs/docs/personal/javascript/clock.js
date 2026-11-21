@@ -1,43 +1,139 @@
 (() => {
-    const secondHand = document.querySelector('.second-hand');
-    const minsHand = document.querySelector('.min-hand');
-    const hourHand = document.querySelector('.hour-hand');
-
-    function addZero(i) {
-        if (i < 10) {
-            i = "0" + i;
-            return i;
-        } else {
-            return i;
-        }
+    function padZero(value) {
+        return String(value).padStart(2, "0");
     }
 
-    function setDate() {
-        const now = new Date();
+    function initClock() {
+        const clockEl = document.querySelector(".clock-wrapper");
+        if (!clockEl || clockEl.dataset.initialized === "true") return;
+        clockEl.dataset.initialized = "true";
 
-        const seconds = now.getSeconds();
-        const secondsDegrees = ((seconds / 60) * 360) + 90;
-        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+        const secondHand = clockEl.querySelector(".second-hand");
+        const minsHand = clockEl.querySelector(".min-hand");
+        const hourHand = clockEl.querySelector(".hour-hand");
 
-        const mins = now.getMinutes();
-        const minsDegrees = ((mins / 60) *360) + ((seconds/60)*6) + 90;
-        minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+        const hourDisplay = clockEl.querySelector("#digital-clock-hour");
+        const minDisplay = clockEl.querySelector("#digital-clock-min");
+        const secDisplay = clockEl.querySelector("#digital-clock-sec");
+        const dateDisplay = clockEl.querySelector("#digital-clock-date");
 
-        const hour = now.getHours();
-        const hourDegrees = ((hour / 12) *360) + ((mins/60)*30) + 90;
-        hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Local";
 
-        document.getElementById("digital-clock-sec").innerHTML = addZero(seconds);
-        document.getElementById("digital-clock-min").innerHTML = addZero(mins);
-        document.getElementById("digital-clock-hour").innerHTML = addZero(hour);
+        function updateClock() {
+            if (!clockEl.isConnected) {
+                clearInterval(timerId);
+                return;
+            }
+
+            const now = new Date();
+            const seconds = now.getSeconds();
+            const minutes = now.getMinutes();
+            const hours = now.getHours();
+
+            // Prevent backward 360deg snap when seconds wrap from 59 -> 0
+            if (seconds === 0) {
+                secondHand.classList.add("no-transition");
+            } else {
+                secondHand.classList.remove("no-transition");
+            }
+
+            const secondsDegrees = (seconds / 60) * 360;
+            const minsDegrees = (minutes / 60) * 360 + (seconds / 60) * 6;
+            const hourDegrees = ((hours % 12) / 12) * 360 + (minutes / 60) * 30;
+
+            secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+            minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+            hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+
+            hourDisplay.textContent = padZero(hours);
+            minDisplay.textContent = padZero(minutes);
+            secDisplay.textContent = padZero(seconds);
+
+            const formattedDate = now.toLocaleDateString("en-US", {
+                weekday: "short",
+                month: "short",
+                day: "numeric",
+            });
+            dateDisplay.textContent = `${formattedDate} • ${timeZone}`;
+        }
+
+        const timerId = setInterval(updateClock, 1000);
+        updateClock();
     }
 
-    const interval = setInterval(() => {
-        if (!secondHand.isConnected) {
-            clearInterval(interval);
-            return;
+    if (typeof document$ !== "undefined") {
+        document$.subscribe(initClock);
+    } else {
+        document.addEventListener("DOMContentLoaded", initClock);
+    }
+    initClock();
+})();(() => {
+    function padZero(value) {
+        return String(value).padStart(2, "0");
+    }
+
+    function initClock() {
+        const clockEl = document.querySelector(".clock-wrapper");
+        if (!clockEl || clockEl.dataset.initialized === "true") return;
+        clockEl.dataset.initialized = "true";
+
+        const secondHand = clockEl.querySelector(".second-hand");
+        const minsHand = clockEl.querySelector(".min-hand");
+        const hourHand = clockEl.querySelector(".hour-hand");
+
+        const hourDisplay = clockEl.querySelector("#digital-clock-hour");
+        const minDisplay = clockEl.querySelector("#digital-clock-min");
+        const secDisplay = clockEl.querySelector("#digital-clock-sec");
+        const dateDisplay = clockEl.querySelector("#digital-clock-date");
+
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Local";
+
+        function updateClock() {
+            if (!clockEl.isConnected) {
+                clearInterval(timerId);
+                return;
+            }
+
+            const now = new Date();
+            const seconds = now.getSeconds();
+            const minutes = now.getMinutes();
+            const hours = now.getHours();
+
+            // Prevent backward 360deg snap when seconds wrap from 59 -> 0
+            if (seconds === 0) {
+                secondHand.classList.add("no-transition");
+            } else {
+                secondHand.classList.remove("no-transition");
+            }
+
+            const secondsDegrees = (seconds / 60) * 360;
+            const minsDegrees = (minutes / 60) * 360 + (seconds / 60) * 6;
+            const hourDegrees = ((hours % 12) / 12) * 360 + (minutes / 60) * 30;
+
+            secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+            minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+            hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+
+            hourDisplay.textContent = padZero(hours);
+            minDisplay.textContent = padZero(minutes);
+            secDisplay.textContent = padZero(seconds);
+
+            const formattedDate = now.toLocaleDateString("en-US", {
+                weekday: "short",
+                month: "short",
+                day: "numeric",
+            });
+            dateDisplay.textContent = `${formattedDate} • ${timeZone}`;
         }
-        setDate();
-    }, 1000);
-    setDate();
+
+        const timerId = setInterval(updateClock, 1000);
+        updateClock();
+    }
+
+    if (typeof document$ !== "undefined") {
+        document$.subscribe(initClock);
+    } else {
+        document.addEventListener("DOMContentLoaded", initClock);
+    }
+    initClock();
 })();
