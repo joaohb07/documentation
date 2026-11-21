@@ -2,49 +2,30 @@ site_name: My Projects
 nav:
   - index.md
   - Overview: documentation_overview.md
-  - Python:
-    - python/python_projects.md
-    - Game:
-      - python/snake_game/snake.md
-    - Scripts:
-      - python/walk_dir/walk_dir.md
-    - Nootebooks:
-      - Highest movies grossing:
-        - python/movies_grossing/movies.ipynb
-        - python/movies_grossing/algorithms.ipynb
-      - python/netflix/netflix_data_analisys.ipynb
-    - Unit Tests:
-      - python/unit_tests/unit_tests.md
-  - Web:
-    - web/task_app/task_app.md
-    - web/weather_app/weather_app.md
-    - web/notes_app/notes_app.md
-    - web/book_tracker/book_tracker.md
-    - Javascript Exercises:
-      - web/js_exercises/multiplication_table.md
-      - web/js_exercises/calculate.md
-    - web/clock.md
-    - web/calculator.md
-  - C/C++:
-    - C Exercises:
-      - c_cpp_projects/c_exercises/discount_calculation.md
-      - c_cpp_projects/c_exercises/ideal_weight.md
-      - c_cpp_projects/c_exercises/operations.md
-      - c_cpp_projects/c_exercises/personal_loan.md
-      - c_cpp_projects/c_exercises/product_where_from.md
-      - c_cpp_projects/c_exercises/swimmer_category.md
-      - c_cpp_projects/c_exercises/gratification.md
-      - c_cpp_projects/c_exercises/raise_and_classification.md
-      - c_cpp_projects/c_exercises/raise_price.md
-      - c_cpp_projects/c_exercises/show_biggest.md
-      - c_cpp_projects/c_exercises/data_collection.md
-      - c_cpp_projects/c_exercises/tic_tac_toe.md
-    - c_cpp_projects/confectionery/confectionery.md
-    - c_cpp_projects/service_provider/service_provider.md
-  - C.E.:
-    - ce/controle_de_estoque.md
-    - ce/architecture.md
-    - ce/app_overview.md
+  - Apps:
+    - apps/task_app.md
+    - apps/weather_app.md
+  - Academic Projects:
+    - academic/mypas.md
+    - academic/parallel.md
+    - academic/mms_simulator.md
+    - academic/mysh.md
+    - academic/wsn.md
+  - Personal Projects:
+    - Web:
+      - personal/web/clock.md
+      - personal/web/calculator.md
+    - Python:
+      - personal/python/python_projects.md
+      - Nootebooks:
+        - Highest movies grossing:
+          - personal/python/movies_grossing/movies.ipynb
+          - personal/python/movies_grossing/algorithms.ipynb
+        - personal/python/netflix/netflix_data_analisys.ipynb
+        - personal/python/strokes/strokes.ipynb
+    - C/C++:
+      - personal/c_cpp_projects/confectionery/confectionery.md
+      - personal/c_cpp_projects/service_provider/service_provider.md
 #
 #
 # Don't alter the following sections
@@ -90,13 +71,13 @@ theme:
         name: Switch to light mode
 markdown_extensions:
   - admonition
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.highlight:
       anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -118,5 +99,4 @@ extra_css:
   - stylesheets/clock.css
   - stylesheets/calculator.css
 extra_javascript:
-  - javascript/clock.js
-  - javascript/calculator.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
