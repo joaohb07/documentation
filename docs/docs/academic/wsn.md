@@ -3,13 +3,13 @@
 
 > **A graph-theoretic combinatorial optimization framework in Python** designed to minimize physical cabling infrastructure, deployment cost, and transmission latency across geographically distributed Wireless Sensor Networks (WSNs). Developed for the *Graph Theory* (*Teoria dos Grafos*) course at **São Paulo State University (UNESP)**, the project models planar sensor topologies as weighted complete graphs and implements both **Kruskal's** and **Prim's** Minimum Spanning Tree (MST) algorithms from scratch, accompanied by step-by-step trace diagnostics, **Matplotlib** topology rendering, and a **pytest** automated unit test suite.
 
-## 🔗 Quick Links
+## Quick Links
 
 * **Source Code Repository:** [github.com/joaohb07/grafos-final](https://github.com/joaohb07/grafos-final)
 * **Author:** João Henrique Botelho ([@joaohb07](https://github.com/joaohb07))
 * **Course & Institution:** Graph Theory — UNESP
 
-## 🏗️ System Architecture & Optimization Pipeline
+## System Architecture & Optimization Pipeline
 
 The codebase follows a clean object-oriented separation of concerns across domain entities (`Sensor`), graph data structures and greedy MST solvers (`Graph`), and visualization/telemetry utilities (`Helpers`):
 
