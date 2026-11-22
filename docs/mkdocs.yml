@@ -2,6 +2,10 @@ site_name: My Projects
 nav:
   - index.md
   - Overview: documentation_overview.md
+  - My Server:
+    - Server Overview: server/overview.md
+    - Live Server Telemetry: server/telemetry.md
+    - Architecture & Key Concepts: server/key_concepts.md
   - Apps:
     - apps/task_app.md
     - apps/weather_app.md
@@ -98,5 +102,7 @@ extra_css:
   - stylesheets/extra_css.css
   - stylesheets/clock.css
   - stylesheets/calculator.css
+  - stylesheets/telemetry.css
 extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - server/javascript/telemetry.js
