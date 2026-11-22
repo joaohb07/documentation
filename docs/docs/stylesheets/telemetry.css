@@ -1,0 +1,130 @@
+.jhb-telemetry-box {
+  border: 1px solid rgba(128, 128, 128, 0.28);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+  background: rgba(128, 128, 128, 0.05);
+}
+
+.jhb-telemetry-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.jhb-telemetry-host {
+  font-size: 0.95rem;
+}
+
+.jhb-telemetry-status {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.jhb-host-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.jhb-card {
+  border: 1px solid rgba(128, 128, 128, 0.22);
+  border-radius: 6px;
+  padding: 0.85rem;
+  background: rgba(128, 128, 128, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.jhb-card-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+}
+
+.jhb-card-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.jhb-card-value--sm {
+  font-size: 1rem;
+}
+
+.jhb-card-desc {
+  font-size: 0.72rem;
+  opacity: 0.68;
+  margin-top: 0.45rem;
+  line-height: 1.3;
+}
+
+.jhb-section-title {
+  margin: 0.85rem 0 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+.jhb-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+
+.jhb-table-wrap:last-child {
+  margin-bottom: 0;
+}
+
+.jhb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.jhb-table th,
+.jhb-table td {
+  padding: 0.55rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.18);
+}
+
+.jhb-table th {
+  border-bottom-color: rgba(128, 128, 128, 0.3);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.jhb-mono {
+  font-family: var(--md-code-font-family, monospace);
+  font-size: 0.78rem;
+}
+
+.jhb-muted {
+  opacity: 0.65;
+}
+
+.jhb-badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.jhb-badge--up {
+  background: rgba(16, 185, 129, 0.16);
+  color: #10b981;
+}
+
+.jhb-badge--down {
+  background: rgba(239, 68, 68, 0.16);
+  color: #ef4444;
+}
